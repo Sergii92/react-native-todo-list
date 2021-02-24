@@ -3,6 +3,7 @@ import { StyleSheet, View, Alert } from "react-native";
 import { Navbar } from "./src/components/Navbar";
 import { MainScreen } from "./src/screens/MainScreen";
 import { TodoScreen } from "./src/screens/TodoScreen";
+import { THEME } from "./src/THEME";
 
 export default function App() {
   const [todos, setTodos] = useState([
@@ -85,5 +86,8 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: { padding: 5 },
+  container: {
+    paddingHorizontal: THEME.PADDING_HORIZONTAL,
+    paddingVertical: 20,
+  },
 });
