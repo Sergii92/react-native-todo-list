@@ -7,8 +7,10 @@ import {
   Modal,
   Alert,
 } from "react-native";
+import { MaterialIcons, FontAwesome } from "@expo/vector-icons";
+
 import { THEME } from "../THEME";
-import { Todo } from "./Todo";
+import { AppButton } from "./ui/AppButton";
 
 export const EditModal = ({ visible, onCancel, value, onSave }) => {
   const [title, setTitle] = useState(value);
@@ -35,10 +37,14 @@ export const EditModal = ({ visible, onCancel, value, onSave }) => {
         />
         <View style={styles.buttons}>
           <View style={styles.button}>
-            <Button title="Cancel" onPress={onCancel} color={THEME.RED_COLOR} />
+            <AppButton onPress={onCancel} color={THEME.RED_COLOR}>
+              <MaterialIcons name="cancel" size={20} color="#fff" />
+            </AppButton>
           </View>
           <View style={styles.button}>
-            <Button title="Save" onPress={saveHandler} />
+            <AppButton onPress={saveHandler}>
+              <FontAwesome name="save" size={20} color="#fff" />
+            </AppButton>
           </View>
         </View>
       </View>

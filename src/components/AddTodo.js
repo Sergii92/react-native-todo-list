@@ -1,6 +1,10 @@
 import React, { useState } from "react";
-import { View, StyleSheet, TextInput, Button, Alert } from "react-native";
+import { View, StyleSheet, TextInput, Text, Alert } from "react-native";
+import { Feather } from "@expo/vector-icons";
+
+import { AntDesign } from "@expo/vector-icons";
 import { THEME } from "../THEME";
+import { AppButton } from "./ui/AppButton";
 
 export const AddTodo = ({ onSubmit }) => {
   const [value, setValue] = useState("");
@@ -24,7 +28,10 @@ export const AddTodo = ({ onSubmit }) => {
         autoCorrect={false}
         autoCapitalize="none"
       />
-      <Button title="Add Todo" onPress={pressHandler} />
+
+      <AppButton onPress={pressHandler}>
+        <Feather name="file-plus" size={20} color="#fff" />
+      </AppButton>
     </View>
   );
 };
