@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { View, StyleSheet, TextInput, Keyboard, Alert } from "react-native";
 import { Feather } from "@expo/vector-icons";
 
-import { AntDesign } from "@expo/vector-icons";
 import { THEME } from "../THEME";
 import { AppButton } from "./ui/AppButton";
 

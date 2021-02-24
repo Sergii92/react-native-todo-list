@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Dimensions } from "react-native";
 import { FontAwesome, AntDesign } from "@expo/vector-icons";
 
 import { EditModal } from "../components/EditModal";
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
   },
   button: {
-    width: "40%",
+    width: Dimensions.get("window").width / 3,
   },
   title: {
     fontSize: 24,
